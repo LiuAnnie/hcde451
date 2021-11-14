@@ -26,193 +26,333 @@
     <h3 style="font-style: italic; font-weight: lighter;">November 13, 2021</h3> <!-- DATE POSTED-->
     <img src="A4-Video_Prototype/discoBallStand_grain.jpg" width=80%>  
 
+
     <h2>The Goal</h2>
     <p style="width: 80%">
         Create a 1-2 minute video that comprehensively and concisely communicates the motivation, usage,
         and functionality of the disco ball stand, reimagined as a smart object.
-        <!--
+    </p>
+
+
     <h2>Redesigning the Disco Ball Stand</h2>
     <p style="width: 80%">
         As documented in my previous assignment, I modeled and 3D-printed a stand to hold a disco ball that
-        a friend had gifted me. To improve upon this first stand, I wanted my second prototype to spin and light up. The smart 
-        aspect of my reimagined object that I would fake in the video would be the stand's ability to smartly detect 
-        the disco ball's weight and to automatically begin spinning once the user has placed the disco ball on the stand.
+        a friend had gifted me. To improve upon this first stand, I wanted my second prototype to spin. The smart 
+        aspect of my reimagined object would be the stand's ability to smartly detect the disco ball's weight and to 
+        automatically begin spinning once the user has placed the disco ball on the stand; this would be faked in the video.
         
-        A few weeks ago, I was gifted a lovely disco ball from a friend! Unfortunately, the disco ball is too heavy 
-        for me to install on the ceiling without any screws. The disco ball has mostly been living on my couch and rolling around on the floor. 
-        This assignment became my opportunity to design a 3D-printed stand to hold the disco ball in place! These are a few of 
-        the key design considerations that I kept in mind:
+        Here were a few of my key design considerations:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            The stand should spin the disco ball. Utilize a microcontroller and stepper motor to achieve this.
+        </li>
+        <li>
+            The stand should only be as tall as necessary to house all electronic components and remain 
+            sound in structure.
+        </li>
+        <li>
+            Colorful electronics should be hidden. 
+        </li>
+        <li>
+            Combine 3D-printing and laser-cutting methods to build the stand.
+        </li>
+        <li>
+            Later on, I'll want the stand to light up. The stand's design should consider the placement of LEDs for later installation. 
+            Since the stand will spin, the LEDs must be placed in a location that doesn't spin to avoid the tangling of wires. 
+        </li>
+        <li>
+            The stand should be 3D-printed from a clear material that will diffuse the LED lights.
+        </li>
+    </ul>
+    <p style="width: 80%">
+        With these design considerations in mind, I began working on my first redesign of the disco ball stand.
+    </p>
+
+
+    <h2>First Redesign</h2>
+    <img src="A4-Video_Prototype/redesign_1.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        First redesign.
     </p>
     <p style="width: 80%">
-        - The stand should fit nicely on a side table or coffee table. It shouldn't be wider
-        than 5 inches in diameter.
-        <br>
-        - The disco ball has a hook for hanging at one end. While displaying, I want the stand 
-        to keep the hook hidden.
-        <br>
-        - The stand should be minimal in design to not distract from the disco ball.
-        <br>
-        - The stand should ideally serve another purpose while not in use.
+        The new stand would have 3 main components: a 3D-printed bowl for spinning the disco ball, a 3D-printed shell to house the bowl 
+        and electronics, and a flexible laser-cut exterior to hide the electronics. I would use an ESP8266 microcontroller to program the 
+        stepper motor and eventually the installed lights. I chose an ESP8266, because it's small and is a low cost Wi-Fi microchip that 
+        would allow experimentation with IoT applications later on.
     </p>
     <p style="width: 80%">
-        Since this model would be constrained by time to print and my own abilities to 3D model the 
-        design, it had to be minimal and feasible. I decided to go with a cylindrical stand shape 
-        with cutouts fit the disco ball and its hook. When not in use, the stand could act as a small 
-        tray for hair ties/clips. It can even act as a large coaster. I went on to sketching and took 
-        a few measurements to ensure the stand would fit the disco ball.
-    </p>
-    <img src="A3-3D_Printed_Object/sketch.jpg" width=80%>
-    <p style="width: 80%">
-        The overall design is similar to that of a small bowl, however the top edges of the stand have 
-        been cut to accommodate the curvature of the disco ball. This allows the ball to sit nicely on top of
-        the stand. I also ensured that there was enough cutout space for the hook so that I wouldn't have to 
-        fumble with it everytime I placed the ball on the stand.
+        My biggest concern was my stepper motor's ability to support and spin the weight of the disco ball. So I tested it! I roughly attached
+        my first prototype onto the motor, placed the disco ball on top, and surprisingly, the stepper motor was able to spin the disco ball! 
+        I did however, learn that I had to redesign the stand again to be more structurally sound with a rotating motor. This test taught me that 
+        the motor had to be firmly planted on a flat surface, otherwise, the weight of the disco ball would cause the motor's body to spin instead 
+        the disco ball. I had to redesign my first idea to be more structurally sound.
     </p>
     <p style="width: 80%">
-        To make the CAD process faster, I wrote down all the steps I would take before any modeling. 
-        Taking this step allowed me to verify that I've hit all three primitive operations.
+        Additionally, I wanted to eventually light up the stand with 5 individual RGB LEDs, but I realized that I didn't have enough pins on my 
+        microcontroller to support all 5. I had to rethink the first redesign to consider an LED strip instead.
     </p>
-    
+
+
+    <h2>Second Redesign</h2>
+    <img src="A4-Video_Prototype/redesign_2.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Second redesign.
+    </p>
+    <p style="width: 80%">
+        I made slight changes to the internal structure of the second redesign to include a ledge that would support a laser-cut disk that I would 
+        attach the stepper motor onto. The ledge and disk would ensure that the motor resides above the microcontroller and has a sturdy base to stick to. 
+        I also redesigned the bowl that holds the disco ball to be smaller around the base to allow more room for the LED strip.
+    </p>
+    <p style="width: 80%">
+        I was confident that this redesign would be structurally sound so I began prototyping!
+    </p>
+
+
+    <h2>Prototyping</h2>
+    <p style="width: 80%">
+        Here were the steps I that took:
+    </p>
+    <ol style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            3D-model all printed components in SolidWorks.
+        </li>
+        <li>
+            3D-print all modeled components in clear PLA.
+        </li>
+        <li>
+            Laser-cut plywood components.
+        </li>
+        <li>
+            Program microcontroller to rotate stepper motor. 
+        </li>
+        <li>
+            Assemble components.
+        </li>
+        <li>
+            Create shot list / storyboards for video.
+        </li>
+        <li>
+            Film shots.
+        </li>
+        <li>
+            Edit video and upload to YouTube.
+        </li>
+    </ol>
+
     <h2>Modeling in SolidWorks</h2>
     <p style="width: 80%">
-        I modeled the part in SolidWorks! I used a revolution to create the walls of the stand, extruded the 
-        base of the stand to make it into a bowl, and booleandifferenced/extrude cut the top edge of the stand 
-        to match the curvature of the disco ball. Here are some images from throughout the CAD process:
+        I modeled the shell and bowl in SolidWorks! The main operations I used were 
+        extrude, extrude cut, revolution, and fillet.
+    </p>
+    <img src="A4-Video_Prototype/Disco_Shell_Sketch.PNG" width=80%>
+    <img src="A4-Video_Prototype/Disco_Shell__Hole_Sketch.PNG" width=80%>
+    <img src="A4-Video_Prototype/Disco_Shell_Final_CAD.PNG" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Disco_Shell
+    </p>
+    <img src="A4-Video_Prototype/Disco_Bowl_Sketch.PNG" width=80%>
+    <img src="A4-Video_Prototype/Disco_Bowl_Final_CAD.PNG" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Disco_Bowl
     </p>
 
-    <img src="A3-3D_Printed_Object/revolution_sketch.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/revolution_preview.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/post_revolution.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/extrusion_preview.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/cutout_sketch.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/cutout_revolution_preview.PNG" width=80%>
-    <img src="A3-3D_Printed_Object/final_discoballstand_cad.PNG" width=80%>
 
-    <h2>Prototype</h2>
+    <h2>3D Printing</h2>
     <p style="width: 80%">
-        I then 3D printed the stand (4hr18min)!
+        The shell was a 10hr54min print and the bowl was a 4hr39min print. After printing the bowl, I realized that the fit 
+        could have been a bit better so I made small adjustments to the model and reprinted.
     </p>
-    <img src="A3-3D_Printed_Object/printed_stand.jpg" width=80%>
-
-    <p style="width: 80%">
-        Here's a picture of the prototype with the disco ball!
-    </p>
-    <img src="A3-3D_Printed_Object/discoballstand.jpg" width=80%>
-    <img src="A3-3D_Printed_Object/discoStand_closeup.jpg" width=80%>
-    <img src="A3-3D_Printed_Object/disco_hook.JPG" width=80%>
-    <img src="A3-3D_Printed_Object/disco_hook_insert.JPG" width=80%>
 
 
-    <h2>User Test</h2>
+    <h2>Laser Cutting</h2>
     <p style="width: 80%">
-        I conducted one user test with my final prototype where I asked the user to place the disco ball on the stand 
-        and comment on their thoughts about the experience and overall 3D model. The user was one of my neighbors in my 
-        apartment building. During my user test, I tested for overall usability, feasibility, and desirability.
-    </p>
-    <p style="width: 80%; font-weight: bold">
-        Usability
-    </p>
-    <p style="width: 80%">
-        - I had the user place the disco ball on the stand.
-        <br>
-        - I observed how well the disco ball stayed on the stand, checking for sturdiness, if it was prone to fall over, etc.
-    </p>
-    <p style="width: 80%; font-weight: bold">
-        Feasibility
+        I laser cut the exterior piece of 5mm thick plywood that wrapped around the shell, a disk to mount the bowl on, and a disk 
+        to mount the motor onto. I used a wave lattice kerf pattern to laser cut the exterior wood to be flexible (pattern can be found     
+        <a target="_blank" href="https://github.com/LiuAnnie/hcde451/blob/main/A3-3D_Printed_Object/discoBallStand.gcode"
+        style="color: deeppink">
+        here</a>).
     </p>
     <p style="width: 80%">
-        - The user placed the disco ball on the stand again, but this time they hid the hook in the stand.
-        <br>
-        - I observed how long this task took to complete and looked for potential pain points (Is the cutout large enough to accommodate 
-        the hook without having the fumble with it?)
+        This process took a bit longer than expected. The first time I tried laser-cutting the exterior piece, it ended up being a little 
+        too short to fully wrap around the stand. I also forgot to cut out the hole I needed to connect the electronics to power. 
+        I modified the Illustrator file to cut this piece longer than needed, added the hole, and then slowly cut off the end of the exterior 
+        piece a few bits at a time until I got the sizing right. 
     </p>
-    <p style="width: 80%; font-weight: bold">
-        Desirability
+    <img src="A4-Video_Prototype/laser_cutting.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Laser cutting in progress.
+    </p>
+    <img src="A4-Video_Prototype/patterns.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Two kerf patterns I experimented with.
+    </p>
+    <img src="A4-Video_Prototype/oh_no.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Realizing my first attempt at the exterior piece was too short, and I forgot to cut out the hole for power.
+    </p>
+
+
+    <h2>Programming the ESP8266</h2>
+    <p style="width: 80%">
+        Programming the microcontroller was simple. The only thing I needed to program was the continuous revolution of the stepper motor. 
+        I powered the board and the motor with a 5V wall power supply.
+    </p>
+    <iframe src=https://create.arduino.cc/editor/annielili/022d2a38-2647-4485-8f90-a0ba6d66bd54/preview?embed 
+    style="width:80%; margin:10px 0" frameborder=0></iframe>
+
+
+    <h2>Assembly</h2>
+    <p style="width: 80%">
+        Once all components were completed, I started the final assembly! I inserted all electronics, attached the motor and bowl to their 
+        respective laser cut disks, and super glued the exterior wood piece to the outside of the shell. Once all the internal layers were 
+        properly stacked, the disco ball stand was done, and I was ready to start the video making process.
+    </p>
+
+
+    <h2>Planning the Video</h2>
+    <p style="width: 80%">
+        My goal for the video was to showcase the product. What is it? Why is it needed? What does it do? Prior to any filming, I began by 
+        making some shot lists, which sort of became a rough storyboard. Here is the general outline of the video:
+    </p>
+    <ol style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Set the scene by explaining the scenario and presenting a problem / need. <span style="font-style: italic;"> I have a disco ball, 
+            but it's too heavy to hang up so it rolls around the apartment. I need a solution!</span>
+        </li>
+        <li>
+            Showcase the redesigned product and breakdown its components. <span style="font-style: italic;"> Timelapse the stand's assembly or callout 
+            the different components.</span>
+        </li>
+        <li>
+            Showcase what makes the reimagined product smart and what it does. <span style="font-style: italic;"> Use cuts to make the stand 
+            appear responsive and describe feature with text.</span>
+        </li>
+        <li>
+            Display functioning product within home. <span style="font-style: italic;"> Various shots of the stand and disco ball.</span>
+        </li>
+    </ol>
+    <img src="A4-Video_Prototype/shot_list.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Sketches of different shots I wanted to film.
+    </p>
+    <img src="A4-Video_Prototype/shot_list_2.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        More sketches.
+    </p>
+
+
+    <h2>Filming</h2>
+    <p style="width: 80%">
+        I wish I had spent a bit more time planning, but I was running low on time, so I threw myself into filming. I didn't end up filming 
+        everything on my shot list, because as I filmed, I knew which shots I would want to include in the final video and removed shots from 
+        the list that I found redundant. I used a tripod and experimented with colorful background lighting during this process.
+    </p>
+
+
+    <h2>Editing</h2>
+    <p style="width: 80%">
+        I edited my video with Adobe Premiere Pro! I struggled a bit at the beginning, because when I began to put the shots together as planned, 
+        it began to feel like an infomercial I'd see on TV when I was seven years old. I needed to rethink how I was going to present the problem 
+        and what I was going to do to fix it (disco ball rolling around and making the stand).
     </p>
     <p style="width: 80%">
-        - During and after the user test, I asked the user what they thought about the disco ball stand and how they would improve it to
-        be more desirable.
-        <br>
-        - These responses helped me think of future iterations of this design.
+        I solved this issue by introducing a text message exchange at the beginning of my video that explains the scenario, introduces the problem, 
+        and showcases a need for the product. I learned how to do the text message exchange with this
+        <a target="_blank" href="https://youtu.be/efSlekAuE94"
+        style="color: deeppink">
+        YouTube tutorial</a>. 
+        The rest of the editing was smooth sailing.
     </p>
+
+
+    <h2>Video</h2>
+    <p style="width: 80%">
+        Here's my final video! In this video, I present a need for the disco ball stand, list its features, showcase its smart feature, and display 
+        it within my home. <span style="font-style: italic;"> Note that the video prototype I brought to critique had no sound. I later added messaging 
+        sound effects and a track I got from Adobe Stock Audio.</span> 
+    </p>
+    <iframe width="80%" height="500px" src="https://www.youtube.com/embed/HVtVMFydPAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p style="width: 80%">
+        I hope to make another updated video in the future once I've added lights to the stand.
+    </p>
+
     <h2>Analysis</h2>
-    <p style="width: 80%; font-weight: bold">
-        User Test Feedback:
-    </p>
     <p style="width: 80%">
-        - The bottom of the 3D model is too smooth and slides around too easily. The stand and disco ball 
-        could potentially slide off the table if pushed accidentally.
-        <br>
-        - The stand serves its purpose, it's easy to use, and the user likes it!
-        <br>
-        - Besides the (potentially slippery) bottom, the stand is sturdy and holds up the disco ball.
-        <br>
-        - In future iterations, the user thinks it would be cool if the stand could spin the disco ball.
+        I presented my video on critique day (11/09/2021) to my class and received feedback from my instructors and 7 of my classmates.
     </p>
     <p style="width: 80%; font-weight: bold">
-        Critique Feedback:
+        Critique Feedback and Improvements:
     </p>
-    <p style="width: 80%;font-style">
-        - Consider adding lights to the base of the stand.
-        <br>
-        - In future iterations, consider combining laser-cutting and 3D printing. The base could also be made 
-        taller to hide additional components.
-    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Show vs. tell by including more shots of yourself having difficulty hanging the disco ball up.
+            <ul>
+                <li><span style="font-style: italic;">Improvement: The introductory text messaging exchange could 
+                overlay a shot of me attempting to hang the ball up.</span></li>
+            </ul>
+        </li>
+        <li style="padding-top: 10px;">
+            Bring the text messaging back around at the end for a more complete resolution.
+            <ul>
+                <li><span style="font-style: italic;">Improvement: There could be a brief two message exchange between the two texters 
+                at the end, where one shares an image of the final stand and the other reacts.</span></li>
+            </ul>
+        </li>
+        <li style="padding-top: 10px;">
+            Add audio to the video to make it more exciting.
+            <ul>
+                <li><span style="font-style: italic;">I made this change!</span></li>
+            </ul>
+        </li>
+        <li style="padding-top: 10px;">
+            The introductory text message exchange was a creative and concise way to set the scene and introduce the problem/need.
+        </li>
+        <li>
+            The shots look well done, and the video is clear. There was no confusion.
+        </li>
+        <li>
+            The redesign of the disco ball stand is successful.
+        </li>
+    </ul>
+
     <p style="width: 80%; font-weight: bold">
-        What Worked Well:
+        What I Would Do Differently in the Future:
     </p>
-    <p style="width: 80%">
-        - The stand printed with no issues and didn't require supports. Printed in 4 hours 18 minutes on a Dremel 3D45.
-        <br>
-        - The stand successfully holds up/displays the disco ball while hiding the hook.
-    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            I wish that I had taken more photos throughout the process. I forgot to take photos of the 3D printed and laser cut components prior to assembly.
+        </li>
+        <li>
+            Allocate more time towards video planning, filming, and editing in the future! Although I did plan, I ended up scrapping a large portion 
+            of my video plan, since it didn't look like what I had imagined when being executed. Make time to experiment with different shots!
+        </li>
+    </ul>
+
     <p style="width: 80%; font-weight: bold">
-        What Needed Improvement:
+        Key Findings and Learnings:
     </p>
-    <p style="width: 80%">
-        - The bottom of the model is too smooth, making it more likely to slide off a table if pushed. To fix this, I could
-        add rubber feet to the bottom of the model or the 3D model could be modified to accommodate the addition of adhesive 
-        rubber feet (so it looks more flush with the table surface).
-        <br>
-        - The user suggested that I make the stand spin in the future! I agree! In a future iteration, I'd like to redesign the 3D model 
-        stand to consider the addition of a motor.
-    </p>
-    <p style="width: 80%; font-weight: bold">
-        Key Findings:
-    </p>
-    <p style="width: 80%">
-        - The bottom of the model needs to be modified so it's less slippery!
-        <br>
-        - Users were pleased with how the stand fulfilled its purpose.
-    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Test the design throughout the process! If I had not tested my stepper motor's ability to spin the disco ball or my first redesign of 
+            the stand during the process, I would have wasted a lot of time printing a structure that wouldn't have been supportive enough. Quick 
+            tests help inform the design, reduce anxieties about whether something will work, and save time overall.
+        </li>
+        <li>
+            This entire process was a lot of trial and error. I spent a little over 24 hours outside of class at the Mill working on the design, 
+            3D-printing, laser-cutting, and assembly of this stand. I spent around 32 hours on this assignment total, including 3D-modeling, programming 
+            the microcontroller, making shot lists, filming, and editing. During this time, I was able to make mistakes, learn from them, modify my 
+            designs, and make multiple versions of different components.
+        </li>
+    </ul>
 
     <p style="width: 80%; padding-top: 30px; font-size: 16pt">
-    </a> Do you have a 12" disco ball that needs a stand? I've uploaded my part, STL, and gcode (for Dremel 3D45) files onto my
-    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/tree/main/A3-3D_Printed_Object"
+    </a> Would you like to create this disco ball stand? All files can be found on my
+    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/tree/main/A4-Video_Prototype"
        style="color: deeppink">
         GitHub!
     </a>
-</p>
-<p style="width: 80%; padding-top: 10px; font-size: 16pt">
-    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/blob/main/A3-3D_Printed_Object/a3_discoBallStand.SLDPRT"
-    style="color: deeppink">
-     SolidWorks Part File
-     </a>
-</p>
-<p style="width: 80%; padding-top: 10px; font-size: 16pt">
-    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/blob/main/A3-3D_Printed_Object/a3_discoBallStand.STL"
-    style="color: deeppink">
-     STL File
-    </a>
-</p>
-<p style="width: 80%; padding-top: 10px; font-size: 16pt">
-    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/blob/main/A3-3D_Printed_Object/discoBallStand.gcode"
-    style="color: deeppink">
-    GCode, Sliced for Dremel 3D45
-    </a>
-</p>
-
+    </p>
 </div>
--->
 </body>
 </html>
