@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/upt8ghq.css">
+    <title>Final Project</title>
+</head>
+<body>
+
+<div class="sidebar">
+    <b>Annie Liu</b>
+    <c>UX Prototyping</c>
+    <a class="active" href="index.html">projects</a>
+    <a href="about.html">about</a>
+    <br>
+    <br>
+    <d>Other Works</d>
+    <a href="https://liuannie.github.io/">physical computing</a>
+    <a href="https://liuannie.github.io/hcde533/">digital fabrication</a>
+</div>
+
+<div class="content" style="padding-left: 20px">
+    <h1 style="padding-top: 10px">Final Project</h1>
+    <h3 style="font-style: italic; font-weight: lighter;">December 13, 2021</h3> <!-- DATE POSTED-->
+    <img src="Final/images/shoeRack_withStackers.jpg" width=80%>  
+
+
+    <h2>The Goal</h2>
+    <p style="width: 80%">
+        Design and prototype two shoe storage devices: a shoe rack and shoe stackers.
+    </p>
+
+
+    <h2>Design Concept</h2>
+    <p style="width: 80%">
+        Motivated by <span style="font-weight: bold;">usability</span>, for this solo final project, I created a <span style="font-weight: bold;"> stackable laser-cut 
+        shoe rack and a 3D-printed shoe stacker.</span>
+    </p>
+    <p style="width: 80%">
+        I wanted to create something functional that would make my personal space more
+        organized and efficient, and I was also interested in creating something that
+        others could easily recreate and utilize by downloading my openly available Illustrator and
+        STL files (on my <a target="_blank" href="https://github.com/LiuAnnie/hcde451/tree/main/Final"
+        style="color: deeppink">
+         GitHub!
+     </a>).
+    </p>
+    <p style="width: 80%">
+        Here were my <span style="font-weight: bold;">key design decisions:</span>
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            The shoe rack's design must be shelf-height adjustable.
+            <ul>
+                <li><span style="font-style: italic;">Shoes come in different sizes and heights.</span></li>
+            </ul>
+        </li>
+        <li>
+            The shoe rack must be stackable.
+            <ul>
+                <li><span style="font-style: italic;">When more storage is needed, users should be able to cut another rack and place it on
+                    top of the previous one. No modification to the rack’s design should be needed.
+                    </span></li>
+            </ul>
+        </li>
+        <li>
+            The shoe stacker should be compatible with different types of shoes.
+            <ul>
+                <li><span style="font-style: italic;">Greater compatibility with different shoes makes the design more versatile and
+                    applicable to the user’s closet.
+                    </span></li>
+            </ul>
+        </li>
+        <li>
+            The shoe stacker should print without support material.
+            <ul>
+                <li><span style="font-style: italic;">Reduce material waste and printing time.
+                    </span></li>
+            </ul>
+        </li>
+        <li>
+            The shoe stacker should fit in the shoe rack.
+            <ul>
+                <li><span style="font-style: italic;">Both devices should work together!
+                </span></li>
+            </ul> 
+        </li>
+    </ul>
+
+
+    <h2>Project Goals</h2>
+    <p style="width: 80%">
+        There were four main components to the final project:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            stackable laser-cut shoe rack
+        </li>
+        <li>
+            3D-printed shoe stacker
+        </li>
+        <li>
+            user test(s) for usability
+        </li>
+        <li>
+            1-minute video demonstration
+        </li>
+    </ul>
+
+
+    <h2>Initial Sketches and Preparation</h2>
+    <p style="width: 80%">
+        Before I dove into prototyping, I began with a few initial sketches of my devices to illustrate
+        what I had in mind.
+    </p>
+    <img src="Final/images/ideaSketch.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Idea sketches.
+    </p>
+    <p style="width: 80%">
+        I continued by taking measurements of my space and shoes to get an estimate of how big
+        the shoe rack and shoe stackers should be. Once I recorded these measurements, I
+        sketched more final versions of both the shoe rack and stacker in my sketchbook with
+        rough dimensions. From there, I began working on the CAD model for the shoe stacker.
+    </p>
+
+
+    <h2>Making the 3D-Printed Shoe Stacker</h2>
+    <p style="width: 80%">
+        I modeled the shoe stacker in SolidWorks, splitting the device into two parts, the stacker
+        and the anti-slip patch that would be glued to the top of the stacker, to eliminate the need
+        for support material.
+    </p>
+    <img src="Final/images/stacker_CAD.png" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Shoe Stacker CAD
+    </p>
+    <img src="Final/images/anti_slip_CAD.png" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Anti-Slip Patch CAD
+    </p>
+    <p style="width: 80%">
+        Once these pieces were modeled, I started the 3D-printing process. It’s approximately 9
+        hours of printing total for both parts. The stacker printed without issue, but I ran into a few
+        bed plate adhesion issues with the anti-slip patch and realized that my silver filament
+        wouldn’t print the model properly. I fixed the bed plate adhesion issue by printing one
+        patch at a time instead of two, and my other two rolls of filament printed the model
+        successfully. On my first test print of the anti-slip patch, the circular grippy components
+        would fall off the base. This was resolved by increasing the base’s thickness in the CAD
+        model.
+    </p>
+    <img src="Final/images/failed_anti_print.JPG" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Anti-Slip Patch Failed Print
+    </p>
+    <p style="width: 80%">
+        After fixing the anti-slip patch, I used tape to secure the patch onto the stacker, and then
+        tested for durability by inserting my heaviest shoes into the stacker. The stacker did not
+        break and shoes did not slip off the top! From there, I repeated the above prints twice to
+        have 3 stackers in total. The stackers can stack into each other to save space!
+    </p>
+    <img src="Final/images/stackers.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Shoe Stackers
+    </p>
+    <img src="Final/images/stackers_stacked.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Shoe Stackers Stacked Into Each Other
+    </p>
+
+
+    <h2>Making the Laser-Cut Shoe Rack</h2>
+    <p style="width: 80%">
+        The shoe rack was the most challenging part of my project.
+    </p>
+    <p style="width: 80%">
+        I first designed how the shoe rack would stack. The top component of the shoe rack must
+        allow the bottom of another shoe rack to sit on top. Designing in Illustrator, I created
+        notches on the top and bottom edges of the side legs. These notches would fit together
+        when stacked and would be secured with a clip.
+    </p>
+    <img src="Final/images/side_legs.png" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Shoe Rack Side Legs
+    </p>
+    <p style="width: 80%">
+        I made the shoe rack shelf-height adjustable by creating 9 different slots where the user
+        could insert 1-2 racks. To change the shelf height, the user would simply slide out one shelf
+        piece and slide it through another slot.
+    </p>
+    <p style="width: 80%">
+        My goal was to laser-cut all components for the rack, so I created a number of clips to
+        secure parts in place and tested several different fits. Once I found a good fit, I cut
+        multiples of the different kinds of clips I would need: ones to secure the shelves in place
+        and ones to connect stacking racks. After cutting all clips, I realized that laser-cutting was
+        a poor choice for making clips, because the edges of the material wear down over time,
+        making the fit loose. This defeated the purpose of using a clip to hold materials together. I
+        resolved this issue by modeling and 3D-printing the needed clips.
+    </p>
+    <img src="Final/images/clips_tested.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Myriad of laser-cut(and some 3D-printed) clips tested on the shoe rack
+    </p>
+    <p style="width: 80%">
+        Once the side legs, shelves, and clips were cut, I finished everything I had planned to make
+        for the shoe rack, but once I assembled it, I realized it <span style="font-style: italic;"> wasn’t sturdy.</span> Even though the shoe
+        rack was functional, it would wobble and sway back and forth.
+    </p>
+    <p style="width: 80%">
+        I resolved
+        the wobble by cutting the side leg pieces to include a notch along the left and right edges
+        at the top and bottom. I placed laser-cut bars at these notches that would connect both
+        side leg pieces and used the cut out wood from the slots to create cross bars on the back of
+        the rack. The cross bars would be held in place by 3D printed clips as shown below. These
+        temporary changes made the shoe rack sturdy, and now it was complete! The next step was
+        creating the video demo and user evaluation.
+    </p>
+    <img src="Final/images/crossBar.JPG" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Shoe rack with cross bars
+    </p>
+
+
+    <h2>Creating the Video Demo</h2>
+    <p style="width: 80%">
+        There was a lot to fit into a 1-minute video demo, so I made a checklist of things I wanted to
+        include and then I storyboarded!
+    </p>
+    <img src="Final/images/videoPlanning.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Video Planning
+    </p>
+    <img src="Final/images/storyboard.jpg" width=80%>
+    <p style="width: 80%;font-style: italic; font-size: 14px"> <!-- CAPTION -->
+        Storyboarding
+    </p>
+    <p style="width: 80%">
+        From there I recorded and edited. Here's my demo video!
+    </p>
+    <iframe width="80%" height="500px" src="https://youtu.be/cRMhGIhCCJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+
+    <h2>Evaluation and Testing</h2>
+    <p style="width: 80%">
+        Outside of receiving critique from my peers in class, I conducted one user test with a
+        neighbor in my apartment building. I focused on testing the usability of both organizer
+        tools. I encouraged the user to think aloud throughout the test.
+
+    </p>
+    <p style="width: 80%">
+        <span style="font-weight: bold;">For the 3D-printed shoe stacker</span>, I wanted to evaluate whether it could withstand the weight of different kinds of shoes
+        without breaking, hold shoes in place without slipping, and see how well it fits on the shoe
+        rack. This was tested by having the user insert each of their shoes in the 3 stackers I
+        provided and having them place the stackers on and off the shoe rack.
+    </p>
+    <p style="width: 80%">
+        <span style="font-weight: bold;">For the laser-cut shoe rack</span>, I wanted to evaluate how easy it was to assemble, how many shoes it could hold on each
+        tier (with and without stackers), and how sturdy it is. To do this, I had my user assemble the
+        shoe rack, change shelf height, stack another shoe rack on top of the first one, and
+        comment on overall sturdiness.        
+    </p>
+
+
+    <h2>User Testing Feedback and Critique</h2>
+    <p style="width: 80%">
+        Here is the feedback from my one user test and critique received from classmates as I
+        worked on the final project and during the final showcase.
+    </p>
+    <p style="width: 80%; font-weight: bold;">
+        User Test, Shoe Stacker:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Withstanding weight of different shoes
+            <ul>
+                <li>
+                    4/4 pairs of the user’s shoes were successfully
+                    held without stacker breakage.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Holding shoes in place without slipping
+            <ul>
+                <li>
+                    3/4 pairs of the user’s shoes held onto the
+                    stacker without slipping.
+
+                </li>
+            </ul>
+        </li>
+        <li>
+            Fit on shoe rack
+            <ul>
+                <li>
+                    4/4 pairs fit on the shoe rack.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p style="width: 80%; font-weight: bold;">
+        User Test, Shoe Rack:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Ease of assembly
+            <ul>
+                <li>
+                    User said that the shoe rack is difficult to
+                    assemble because the shelves don’t slide easily
+                    into the slots. They mention that installing the
+                    crossbars in the back is confusing, because
+                    there is not a clear place to put them. They
+                    gave assembly a 1/5 rating for ease of assembly
+                    (1 being very difficult and 5 being very easy).
+                </li>
+            </ul>
+        </li>
+        <li>
+            Number of pairs of shoes held on each
+            shelf with and without stackers
+            <ul>
+                <li>
+                    Each shelf can hold 2 pairs of shoes without
+                    stackers and 3 pairs with stackers. The user’s
+                    shoes are larger than mine, so both pairs might
+                    not sit flat on the shelf.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Changing shelf height
+            <ul>
+                <li>
+                    User moved one shelf into another slot and said
+                    that it was annoying to switch out since the slot
+                    fit is too tight. They mention that they would
+                    likely determine their shelf height before using
+                    the rack and then keep shelf height as is after
+                    assembly to avoid having to change shelf
+                    height.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Stacking shoe racks
+            <ul>
+                <li>
+                    The user easily stacked the second shoe rack
+                    on top of the first one with no issue.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Comments on sturdiness
+            <ul>
+                <li>
+                    Without the crossbars in the back, the shoe
+                    rack is very wobbly. It could still hold items on
+                    the shelves, but the user wouldn’t put anything
+                    valuable on the rack in case the rack falls over.
+                    The shoe rack is much sturdier when the
+                    crossbars in the back are installed.
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p style="width: 80%; font-weight: bold;">
+        General Comments from the User Test:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            There should be a ledge that prevents shoes from falling off of the shoe stacker.
+        </li>
+        <li>
+            The user would like to remove a stacker from the rack without having to touch the
+            sides of their shoe.
+        </li>
+        <li>
+            How to install the crossbars on the shoe rack should be made clearer.
+        </li>
+        <li>
+            The clips to connect stacking shoe racks should be a tighter fit so that the user can
+            lift up the shoe rack from the top rack.
+        </li>
+        <li>
+            Overall, the shoe rack is nice and provides a good place to store things.
+        </li>
+    </ul>
+    <p style="width: 80%; font-weight: bold;">
+        Feedback from Classmates:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            “It’s really large! Consider scaling the shoe rack’s size down so it’s shorter.”
+        </li>
+        <li>
+            “Instead of changing the model of the stacker, you can model clips to attach on the
+            sides.”
+        </li>
+        <li>
+            “Shoes might slip out of the bottom when you remove the stacker from the rack so
+            think about adding an anti-slip patch to the bottom of the stacker too.”
+        </li>
+        <li>
+            “I would totally use this! Could you forward me the files?”
+        </li>
+    </ul>
+    <p style="width: 80%;">
+        Overall message from feedback is to make the shoe rack easier to assemble and to ensure
+        that shoes don’t slip off or slide out of the stacker.
+    </p>
+
+
+    <h2>Analysis</h2>
+    <p style="width: 80%; font-weight: bold;">
+        What Worked Well:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            Both prototypes are functional!
+        </li>
+        <li>
+            The shoe stacker prints without support material.
+        </li>
+        <li>
+            People that saw the shoe stacker mentioned that they would use it.
+        </li>
+        <li>
+            3D-printed clips are much more successful than laser-cut clips. The print offers
+            greater flexibility.
+        </li>
+        <li>
+            The shoe rack is capable of holding a lot of items and is very sturdy when stabilized
+            with cross bars.
+        </li>
+    </ul>
+    <p style="width: 80%; font-weight: bold;">
+        What Needed Improvement:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            The shoe rack could be easier to assemble.
+            <ul>
+                <li style="font-style: italic;">
+                    Next Time: I would cut the slots to be larger so that the shelves slide in more
+                    easily. I would also redesign the shoe rack to include permanent crossbars (the
+                    current crossbars are a temporary solution) and indicate where they would be
+                    installed with engravings.                    
+                </li>
+            </ul>
+        </li>
+        <li>
+            The shoe stacker could grip onto the shoes better so that they don't slip.
+            <ul>
+                <li style="font-style: italic;">
+                    Next Time: I would add an anti-slip patch to the bottom portion of the stacker,
+                    and I would remodel the stacker to include a ledge on top to prevent the shoe
+                    from slipping off the stacker. I would also model and print clips to attach to the
+                    sides that would allow the user to pull out the stacker more easily from the shoe
+                    rack.
+                   
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p style="width: 80%; font-weight: bold;">
+        What I Would Do Differently Next Time:
+    </p>
+    <ul style="font-size: 18px; line-height: 26px; width: 80%;">
+        <li>
+            I would allocate time for uncertain issues that may arise during the prototyping
+            process. I allocated 10 hours outside of class to work on making the prototypes
+            (excluding video, user testing, blog, and report), but spent closer to 15 hours.
+        </li>
+        <li>
+            Allocate more time for video filming and editing. I expected the filming and editing
+            process to go by faster.
+        </li>
+        <li>
+            Check my design for any potential structural issues to prevent wobbling.
+        </li>
+    </ul>
+    <p style="width: 80%;">
+        Overall, it was a fun project, and I'm glad to have more storage space now! 
+    </p>
+
+    <p style="width: 80%; padding-top: 30px; font-size: 16pt">
+    </a> Would you like to make the shoe rack and/or shoe stackers? All files can be found on my
+    <a target="_blank" href="https://github.com/LiuAnnie/hcde451/tree/main/Final"
+       style="color: deeppink">
+        GitHub!
+    </a>
+    </p>
+
+</div>
+</body>
+</html>
